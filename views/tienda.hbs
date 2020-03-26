@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row mt-5">
+        {{#each productos_array}}
+        <div class="col-4 mb-4">
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{nombre_producto}}</h5>
+                <p class="card-text text-info mt-2">{{precio_producto}} </p>
+                <p> categoria : {{categoria_producto}}</p>
+                <a href="/tienda/{{id_p}}" class="btn btn-primary btn-block">Ver mas</a>
+            </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

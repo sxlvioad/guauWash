@@ -1,0 +1,15 @@
+<div class="container">
+    {{#each productos_array}}
+    <div class="row mt-5">
+        <div class="col-lg-4 col-md-4 col-12">
+            <img src="/images/imagen-vacia.jpg" style="width:100%; height : auto;">
+        </div>
+        <div class="col-lg-8 col-md-8 col-12">
+            <h4>{{nombre_producto}}</h4>
+            <h2>{{descripcion_producto}}</h2>
+            <p>{{precio_producto}}</p>
+            <small class="text-info">{{categoria_producto}}</small>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center" style="height: 80vh;">
+        <div class="col-6">
+            <h4 class="text-center">Saca tu turno</h4>
+            <form action="/turno" method="POST">
+            <div class="form-group">
+                <input type="text class" class="form-control" placeholder="Nombre y Apellido" name="nombre">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Mail" name="mail">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Telefono" name="telefono">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre Mascota">
+            </div>
+            <div class="form-group">
+                <label for="raza">Seleccione la raza de su perro</label>
+                <br>
+                <select name="raza" id="raza">
+                    <option value="" disabled selected>Raza</option>
+                    <option value="labrador">Labrador</option>
+                    <option value="golden">Golden</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha_turno">Seleccione la fecha del turno</label>
+                <input type="date" class="form-control" id="fecha_turno" name="fecha_turno">
+            </div>
+            <div class="form-group">
+                <label for="hora_turno">Selecciona el horario del turno:</label>
+                <input type="time" class="form-control" id="hora_turno" name="hora_turno">
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
