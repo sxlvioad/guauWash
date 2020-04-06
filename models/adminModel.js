@@ -27,7 +27,7 @@ async function getProductosAdmin() {
 async function crearProducto(obj) {
     try {
         let query = "insert into tienda set ?";
-        let rows = await pool.query(query,obj);
+        let rows =  pool.query(query,obj);
         return rows;
     } catch(error) {
         throw error;

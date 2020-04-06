@@ -1,19 +1,47 @@
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light " id="navbar">
+  <a class="navbar-brand" href="#">Guau Wash</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tienda/all">Tienda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/turno">Solicitar turno</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<br>
+
 <div class="container-fluid">
     <div class="row justify-content-center align-items-center" style="height: 80vh;">
         <div class="col-6">
-            <h4 class="text-center">Saca tu turno</h4>
+            <h1 class="text-center">Solicitud de turno</h1>
+            <hr>
             <form action="/turno" method="POST">
             <div class="form-group">
-                <input type="text class" class="form-control" placeholder="Nombre y Apellido" name="nombre">
+                <label for="nombre">Ingrese su Nombre y Apellido</label>
+                <input type="text class" class="form-control" placeholder="Nombre y Apellido" name="nombre" id="nombre">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Mail" name="mail">
+                <label for="mail">Ingrese su correo electronico</label>
+                <input type="text" class="form-control" placeholder="Mail" name="mail" id="mail">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Telefono" name="telefono">
+                <label for="telefono">Ingrese un numero de telefono</label>
+                <input type="text" class="form-control" placeholder="Telefono" name="telefono" id="telefono">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nombre Mascota">
+                <label for="nombre_mascota">Ingrese el nombre de su mascota</label>
+                <input type="text" class="form-control" placeholder="Nombre Mascota" name="nombre_mascota" id="nombre_mascota">
             </div>
             <div class="form-group">
                 <label for="raza">Seleccione la raza de su perro</label>
@@ -24,17 +52,15 @@
                     <option value="golden">Golden</option>
                 </select>
             </div>
-            <div class="form-group">
+               <div class="form-group">
                 <label for="fecha_turno">Seleccione la fecha del turno</label>
-                <input type="date" class="form-control" id="fecha_turno" name="fecha_turno">
-            </div>
-            <div class="form-group">
-                <label for="hora_turno">Selecciona el horario del turno:</label>
-                <input type="time" class="form-control" id="hora_turno" name="hora_turno">
-            </div>
+                <input type="date" class="form-control" id="fecha_turno" name="fecha">
+               </div> 
             <button type="submit" class="btn btn-primary">Agendar</button>
             </form>
+
         </div>
         
     </div>
 </div>
+

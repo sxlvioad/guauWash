@@ -25,7 +25,18 @@ async function getProducto(id) {
 
 }
 
+async function updateProducto(obj,id) {
+    try {
+        // id : Primary key de la tabla. Importante para actualizar una sola noticia
+        let query = "update tienda set ? where id_p = ?"
+        let rows = await pool.query(query,[obj,id]);
+        return rows;
+    } catch(error) {
+        throw error;
+    }
+}
 
 
 
-module.exports={getProductos, getProducto}
+
+module.exports={getProductos, getProducto, updateProducto}

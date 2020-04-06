@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-4">
-            <a href="/admin/alta"><i style="font-size:2em; cursor:pointer" class="fas fa-plus text-primary" data-toggle="tooltip" data-placement="top" title="Agregar una noticia"></i></a>
+            <a href="/admin/alta"><i style="font-size:2em; cursor:pointer" class="fas fa-plus text-primary" data-toggle="tooltip" data-placement="top" title="Agregar un producto"></i></a>
         </div>
         <div class="col-12 mt-4">
             <table class="table text-center">
@@ -19,7 +19,7 @@
                         <td>{{id_p}}</td>
                         <td>{{nombre_producto}}</td>
                         <td>{{categoria_producto}}</td>
-                        <td>{{precio}}</td>
+                        <td>${{precio_producto}}</td>
                         <td>
                             <a href="/admin/editar/{{id_p}}">
                             <i class="fas fa-pencil-alt text-primary"></i>

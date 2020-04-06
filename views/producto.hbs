@@ -1,15 +1,35 @@
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light " id="navbar">
+  <a class="navbar-brand" href="#">Guau Wash</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tienda/all">Tienda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/turno">Solicitar turno</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<br>
 <div class="container">
     {{#each productos_array}}
-    <div class="row mt-5">
-        <div class="col-lg-4 col-md-4 col-12">
-            <img src="/images/imagen-vacia.jpg" style="width:100%; height : auto;">
-        </div>
-        <div class="col-lg-8 col-md-8 col-12">
-            <h4>{{nombre_producto}}</h4>
-            <h2>{{descripcion_producto}}</h2>
-            <p>{{precio_producto}}</p>
-            <small class="text-info">{{categoria_producto}}</small>
-        </div>
-    </div>
+          <div class="col-lg-4 col-md-4 col-12 product-container">
+              <img src="https://www.ajactraining.org/wp-content/uploads/2019/09/image-placeholder.jpg" style="width:100%; height : auto;">
+          </div>
+          <div class="col-lg-8 col-md-8 col-12 product-container">
+              <h1 class="product_title entry-title">{{nombre_producto}}</h1>
+              <h3>{{descripcion_producto}}</h3>
+              <h3>${{precio_producto}}</h3>
+              <button type="button" class="btn btn-primary">Comprar</button>
+          </div>
     {{/each}}
 </div>

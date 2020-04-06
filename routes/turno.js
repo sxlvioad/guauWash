@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const turnosModel = require('../models/turnosModel');
+const mailModel = require('../models/mailModel');
 
 router.get('/',(req, res, next)=>{
     res.render('turno');
@@ -8,16 +9,21 @@ router.get('/',(req, res, next)=>{
 
 router.post('/', async (req,res,next)=>{
     let objTurno = {
-        nombreCliente : req.body.nombreCliente,
-        mailCliente : req.body.mailCliente,
+        nombre : req.body.nombre,
+        mail : req.body.mail,
         telefono : req.body.telefono,
-        nombreMascota : req.body.nombreMascota,
+        nombre_mascota : req.body.nombre_mascota,
         raza : req.body.raza,
-        fechaTurno : req.body.fechaTurno,
-        horaTurno : req.body.horaTurno
+        fecha : req.body.fecha,
     }
 
     let result = await turnosModel.crearTurno(objTurno);
+    let respuesta = await mailModel.main(objTurno);
+    
+    res.render('index');
+
 })
+
+
 
 module.exports = router;

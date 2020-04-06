@@ -1,0 +1,2 @@
+El proyecto es la pagina de un petshop, permite cargar, eliminar y editar productos desde /admin, le perdmite al usuario sacar un turno  para un baño o peluqueria desde la seccion sacar turno y le es enviado un email a dicho usauario.
+Desde la tienda pueden verse todos los productos cargados y entrar a cada producto en especifico. Quise cargar imagenes pero al hacerlo los arrays me salian todos en null asi que saltie esa parte.
